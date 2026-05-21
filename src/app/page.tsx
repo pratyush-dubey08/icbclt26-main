@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-24 pb-24 overflow-hidden bg-[#0a2540] z-20">
+      <section className="relative h-auto md:min-h-screen flex items-center justify-center pt-32 pb-16 md:pt-24 md:pb-24 overflow-hidden bg-[#0a2540] z-20">
         
         {/* Cinematic Background Image */}
         <motion.div 
@@ -43,13 +43,13 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a2540]/90 via-[#0a2540]/60 to-[#0a2540]"></div>
         </motion.div>
 
-        <div className="relative z-10 w-full max-w-full overflow-hidden px-2 sm:px-6 lg:px-8 text-center mt-8">
+        <div className="relative z-10 w-full max-w-full overflow-hidden px-2 sm:px-6 lg:px-8 text-center mt-20 md:mt-8">
           {/* Hybrid Mode Badge */}
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="inline-block px-8 py-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md shadow-xl text-white font-bold text-sm tracking-[0.2em] uppercase mb-10"
+            className="inline-block px-8 py-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md shadow-xl text-white font-bold text-sm tracking-[0.2em] uppercase mb-6 md:mb-10"
           >
             (Hybrid Mode)
           </motion.div>
@@ -58,7 +58,7 @@ export default function Home() {
             variants={staggerContainer}
             initial="initial"
             animate="whileInView"
-            className="font-heading font-black leading-[1.1] mb-16 flex flex-col items-center gap-6 w-full"
+            className="font-heading font-black leading-[1.1] mb-8 md:mb-16 flex flex-col items-center gap-3 md:gap-6 w-full"
           >
             <motion.span variants={fadeInUp} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[var(--color-brand-gold)] drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)] tracking-wide">
               3rd International Conference
@@ -78,7 +78,7 @@ export default function Home() {
             variants={staggerContainer}
             initial="initial"
             animate="whileInView"
-            className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6 text-white mb-12 text-xl"
+            className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 md:gap-6 text-white mb-8 md:mb-12 text-xl"
           >
             {/* Glassmorphism Cards - Dark Theme */}
             <motion.div variants={fadeInUp} whileHover={{ y: -5, scale: 1.02 }} className="flex items-center space-x-4 bg-white/10 px-8 py-5 rounded-3xl backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-300 cursor-default">
