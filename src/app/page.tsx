@@ -60,16 +60,16 @@ export default function Home() {
             animate="whileInView"
             className="font-heading font-black leading-[1.1] mb-16 flex flex-col items-center gap-6 w-full"
           >
-            <motion.span variants={fadeInUp} className="text-4xl md:text-5xl lg:text-6xl font-black text-[var(--color-brand-gold)] drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)] tracking-wide">
+            <motion.span variants={fadeInUp} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[var(--color-brand-gold)] drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)] tracking-wide">
               3rd International Conference
             </motion.span>
             <motion.span variants={fadeInUp} className="text-3xl md:text-4xl font-medium text-gray-300 italic font-body">
               on
             </motion.span>
-            <motion.span variants={fadeInUp} className="text-4xl md:text-5xl lg:text-[5rem] w-full max-w-none text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)] leading-[1.2] px-2">
+            <motion.span variants={fadeInUp} className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] w-full max-w-none text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)] leading-[1.2] px-4 md:px-2">
               <span className="inline-block xl:whitespace-nowrap">Interfacing Business, Culture,</span><br className="hidden xl:block" /> <span className="inline-block xl:whitespace-nowrap">Language and Technology:</span>
             </motion.span>
-            <motion.span variants={fadeInUp} className="text-3xl md:text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-white to-blue-200 mt-4 w-full pb-4 drop-shadow-2xl font-black leading-[1.2] px-2">
+            <motion.span variants={fadeInUp} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-white to-blue-200 mt-4 w-full pb-4 drop-shadow-2xl font-black leading-[1.2] px-4 md:px-2">
               Transforming Global Communication and Innovation (ICBCLT-2026)
             </motion.span>
           </motion.h1>
@@ -185,7 +185,7 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">Vellore Institute of Technology (VIT) Bhopal University</h2>
               </div>
             </div>
-            <div className="text-lg md:text-xl text-gray-200 space-y-5 text-justify leading-relaxed font-light mt-8">
+            <div className="text-lg md:text-xl text-gray-200 space-y-5 text-left md:text-justify leading-relaxed font-light mt-8 px-2 md:px-0">
               <p>
                 VIT Bhopal University was established in 2017 with a global perspective which is dedicated to make the leaders of future generations. The university is led by Dr. G. Vishwanathan, Founder and Chancellor, Mr. Shankar Vishwanathan, Vice President, Ms Kadambari S. Vishwanathan, Assistant Vice President. It is a lush green campus of 300+ acres situated at the heart of India. Within a short span of time VIT Bhopal University has become one of the best chosen universities by the students for their future ready courses like B.Tech. in Aerospace Engineering, Artificial Intelligence and machine Learning, Cyber Security and digital forensics, bioengineering etc. VIT Bhopal University, envisioned with a new global outlook, will empower its aspirants to attain excellence through learning. The comprehensive teaching methodology designed by the university i.e. Collaborative and Active Learning through Technology (CALTech) pedagogy adopted by all 100% doctoral faculties. It redefines the approach to learning, educating and building knowledge based societies in the country. Research and Development collaborations with renowned national and international organizations and strategic partnerships with universities around the world are being established, to prepare a globally competent generation of professionals. Currently there are more than 15,000+ students enrolled in multiple programmes from all the states across India.
               </p>
@@ -222,7 +222,7 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">Universidad Nacional de Pilar <span className="block text-xl text-gray-400 font-medium mt-1">(National University of Pilar)</span></h2>
               </div>
             </div>
-            <div className="text-lg md:text-xl text-gray-200 space-y-5 text-justify leading-relaxed font-light mt-8">
+            <div className="text-lg md:text-xl text-gray-200 space-y-5 text-left md:text-justify leading-relaxed font-light mt-8 px-2 md:px-0">
               <p>
                 Founded in 1991, this public institution began its academic journey with the support from the private sector, marking a turning point for families who had long endured separation as their children migrated elsewhere for higher education. This impressive development gradually reduced the emotional and social strain of such displacements, allowing students to pursue education closer to home. This unique vision was further emboldened in 1994 when it was granted the status of a National University by law, becoming a prominent center for human resource development in the region.
               </p>
@@ -242,7 +242,7 @@ export default function Home() {
 
       {/* Rationale */}
       <section id="rationale" className="py-16 bg-gradient-to-b from-[#1a103c] via-[#7B1FA2] to-[#E91E63] text-white relative overflow-hidden">
-        <div className="max-w-[95%] xl:max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -253,7 +253,7 @@ export default function Home() {
               Rationale
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-10 leading-tight">Organising the III International Conference</h2>
-            <div className="text-lg md:text-xl text-white/95 max-w-5xl mx-auto space-y-5 text-justify leading-relaxed font-light mt-12 drop-shadow-md">
+            <div className="text-lg md:text-xl text-white/95 max-w-5xl mx-auto space-y-5 text-left md:text-justify leading-relaxed font-light mt-12 drop-shadow-md px-2 md:px-0">
               <p>
                 The association of business, culture, language, and technology has become a crucial area affecting innovation ecosystems, cross-border cooperation, international economics and organizational efficacy in today's fractured world. The quick development of digital technology, artificial intelligence, and platform economics has completely changed how people communicate in a variety of linguistic and cultural contexts.
               </p>

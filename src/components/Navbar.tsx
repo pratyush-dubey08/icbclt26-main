@@ -28,6 +28,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [infoDropdownOpen, setInfoDropdownOpen] = useState(false);
+  const [mobileInfoOpen, setMobileInfoOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -142,20 +143,37 @@ export default function Navbar() {
             <div className="px-4 py-6 space-y-2 flex flex-col">
               <Link href="/" className="block px-4 py-3 text-base font-bold text-gray-800 hover:bg-blue-50 rounded-xl transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
               
-              <div className="px-4 py-2">
-                <div className="text-sm font-black text-gray-400 uppercase tracking-widest mb-3">Information</div>
-                <div className="space-y-1 border-l-2 border-gray-100 pl-3">
-                  {infoLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      className="block py-2 text-sm font-medium text-gray-600 hover:text-[var(--color-brand-blue)] transition-colors"
-                      onClick={() => setIsOpen(false)}
+              <div className="flex flex-col">
+                <button 
+                  onClick={() => setMobileInfoOpen(!mobileInfoOpen)}
+                  className="flex items-center justify-between w-full text-base font-bold text-gray-800 hover:bg-blue-50 py-3 px-4 rounded-xl transition-colors"
+                >
+                  <span>Information</span>
+                  <ChevronDown size={20} className={`transition-transform duration-300 ${mobileInfoOpen ? "rotate-180" : ""}`} />
+                </button>
+                <AnimatePresence>
+                  {mobileInfoOpen && (
+                    <motion.div 
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="overflow-hidden"
                     >
-                      {link.name}
-                    </Link>
-                  ))}
-                </div>
+                      <div className="space-y-1 border-l-2 border-gray-200 ml-6 pl-4 my-2">
+                        {infoLinks.map((link) => (
+                          <Link
+                            key={link.name}
+                            href={link.href}
+                            className="block py-2.5 text-sm font-medium text-gray-600 hover:text-[var(--color-brand-blue)] transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {link.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
               {navLinks.filter(l => l.name !== "Home").map((link) => (
