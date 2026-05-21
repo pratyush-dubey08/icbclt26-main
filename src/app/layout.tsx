@@ -27,9 +27,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${jakartaBody.variable} h-full antialiased scroll-smooth`}
+      className={`${outfit.variable} ${jakartaBody.variable} h-full antialiased scroll-smooth overflow-x-hidden w-full max-w-full`}
     >
-      <body className="min-h-full flex flex-col bg-slate-50">
+      <body className="min-h-full flex flex-col bg-slate-50 overflow-x-hidden w-full max-w-full">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

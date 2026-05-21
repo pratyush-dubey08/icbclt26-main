@@ -43,7 +43,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a2540]/90 via-[#0a2540]/60 to-[#0a2540]"></div>
         </motion.div>
 
-        <div className="relative z-10 w-full max-w-[100vw] px-2 sm:px-6 lg:px-8 text-center mt-8">
+        <div className="relative z-10 w-full max-w-full overflow-hidden px-2 sm:px-6 lg:px-8 text-center mt-8">
           {/* Hybrid Mode Badge */}
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
