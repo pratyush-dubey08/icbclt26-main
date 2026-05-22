@@ -350,51 +350,84 @@ export default function Home() {
           <div className="flex flex-col space-y-16 max-w-5xl mx-auto">
             <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" viewport={{ once: true }}>
               <h3 className="text-2xl font-bold text-[var(--color-brand-blue)] mb-8 text-center uppercase tracking-wider border-b pb-4">Patrons</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  { name: "Dr. G. Viswanathan", title: "Founder & Chancellor" },
-                  { name: "Dr. Sankar Viswanathan", title: "Vice President" },
-                  { name: "Ms. Kadhambari S. Viswanathan", title: "Assistant Vice President" },
-                  { name: "Mrs. Ramni Balasundaram", title: "Trustee" },
-                ].map((person, i) => (
-                  <motion.div variants={fadeInUp} whileHover={{ scale: 1.03, y: -5 }} key={i} className="flex items-center space-x-6 p-4 rounded-3xl bg-white/60 backdrop-blur-xl border border-white shadow-lg hover:shadow-xl transition-all">
+              <div className="flex flex-col items-center gap-6">
+                {/* Center Top */}
+                <div className="w-full md:w-[48%]">
+                  <motion.div variants={fadeInUp} whileHover={{ scale: 1.03, y: -5 }} className="flex items-center space-x-6 p-4 rounded-3xl bg-white/60 backdrop-blur-xl border border-white shadow-lg hover:shadow-xl transition-all">
                     <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-[var(--color-brand-blue)] to-indigo-600 shadow-inner flex-shrink-0 overflow-hidden relative">
                       <div className="absolute inset-0 flex items-center justify-center text-white/50">
                         <Users size={32} />
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold text-[#0a2540]">{person.name}</h4>
-                      <p className="text-[var(--color-brand-gold)] font-medium">{person.title}</p>
+                      <h4 className="text-xl font-bold text-[#0a2540]">Dr. G. Viswanathan</h4>
+                      <p className="text-[var(--color-brand-gold)] font-medium">Founder & Chancellor</p>
                       <p className="text-sm text-gray-500">VIT Bhopal University, India</p>
                     </div>
                   </motion.div>
-                ))}
+                </div>
+                {/* Bottom Row */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                  {[
+                    { name: "Dr. Sankar Viswanathan", title: "Vice President" },
+                    { name: "Ms. Kadhambari S. Viswanathan", title: "Assistant Vice President" },
+                    { name: "Mrs. Ramni Balasundaram", title: "Trustee" },
+                  ].map((person, i) => (
+                    <motion.div variants={fadeInUp} whileHover={{ scale: 1.03, y: -5 }} key={i} className="flex items-center space-x-4 lg:space-x-6 p-4 rounded-3xl bg-white/60 backdrop-blur-xl border border-white shadow-lg hover:shadow-xl transition-all">
+                      <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gradient-to-tr from-[var(--color-brand-blue)] to-indigo-600 shadow-inner flex-shrink-0 overflow-hidden relative">
+                        <div className="absolute inset-0 flex items-center justify-center text-white/50">
+                          <Users size={28} />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-lg lg:text-xl font-bold text-[#0a2540]">{person.name}</h4>
+                        <p className="text-[var(--color-brand-gold)] font-medium text-sm lg:text-base">{person.title}</p>
+                        <p className="text-xs lg:text-sm text-gray-500">VIT Bhopal, India</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </motion.div>
             
             <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" viewport={{ once: true }}>
               <h3 className="text-2xl font-bold text-[var(--color-brand-blue)] mb-8 text-center uppercase tracking-wider border-b pb-4">Co-Patrons</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  { name: "Prof. Satish Kumar Modh", title: "Vice-Chancellor" },
-                  { name: "Prof. T. B. Sridharan", title: "Pro-Vice Chancellor" },
-                  { name: "Mr. KK Nair", title: "Acting Registrar" },
-                  { name: "Dr. Debashis Adhikari ®", title: "Dean, Faculty Affairs" },
-                ].map((person, i) => (
-                  <motion.div variants={fadeInUp} whileHover={{ scale: 1.03, y: -5 }} key={i} className="flex items-center space-x-6 p-4 rounded-3xl bg-white/60 backdrop-blur-xl border border-white shadow-lg hover:shadow-xl transition-all">
+              <div className="flex flex-col items-center gap-6">
+                {/* Center Top */}
+                <div className="w-full md:w-[48%]">
+                  <motion.div variants={fadeInUp} whileHover={{ scale: 1.03, y: -5 }} className="flex items-center space-x-6 p-4 rounded-3xl bg-white/60 backdrop-blur-xl border border-white shadow-lg hover:shadow-xl transition-all">
                     <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-[var(--color-brand-blue)] to-indigo-600 shadow-inner flex-shrink-0 overflow-hidden relative">
                       <div className="absolute inset-0 flex items-center justify-center text-white/50">
                         <Users size={32} />
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold text-[#0a2540]">{person.name}</h4>
-                      <p className="text-[var(--color-brand-gold)] font-medium">{person.title}</p>
+                      <h4 className="text-xl font-bold text-[#0a2540]">Prof. Satish Kumar Modh</h4>
+                      <p className="text-[var(--color-brand-gold)] font-medium">Vice-Chancellor</p>
                       <p className="text-sm text-gray-500">VIT Bhopal University, India</p>
                     </div>
                   </motion.div>
-                ))}
+                </div>
+                {/* Bottom Row */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                  {[
+                    { name: "Prof. T. B. Sridharan", title: "Pro-Vice Chancellor" },
+                    { name: "Mr. KK Nair", title: "Acting Registrar" },
+                  ].map((person, i) => (
+                    <motion.div variants={fadeInUp} whileHover={{ scale: 1.03, y: -5 }} key={i} className="flex items-center space-x-6 p-4 rounded-3xl bg-white/60 backdrop-blur-xl border border-white shadow-lg hover:shadow-xl transition-all">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-[var(--color-brand-blue)] to-indigo-600 shadow-inner flex-shrink-0 overflow-hidden relative">
+                        <div className="absolute inset-0 flex items-center justify-center text-white/50">
+                          <Users size={32} />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-bold text-[#0a2540]">{person.name}</h4>
+                        <p className="text-[var(--color-brand-gold)] font-medium">{person.title}</p>
+                        <p className="text-sm text-gray-500">VIT Bhopal University, India</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </div>
@@ -419,21 +452,34 @@ export default function Home() {
             <div className="w-24 h-1 bg-gradient-to-r from-[var(--color-brand-blue)] to-[var(--color-brand-gold)] mx-auto rounded-full relative z-10"></div>
           </motion.div>
           
-          <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { name: "Prof. Dr. Víctor Ríos Ojeda", title: "Chancellor" },
-              { name: "Prof. Dra. Gladys Emilce Brítez Caballero", title: "Vice Chancellor" },
-              { name: "Ing. Agp. Víctor Armín Riveros Insaurralde", title: "Dean, College of Agricultural Sciences and Rural Development" },
-            ].map((person, i) => (
-              <motion.div variants={fadeInUp} whileHover={{ scale: 1.05, y: -10 }} key={i} className="bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-lg border border-white flex flex-col items-center text-center transition-all">
+          <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="flex flex-col items-center gap-8">
+            {/* Center Top */}
+            <div className="w-full md:w-[60%] lg:w-[40%]">
+              <motion.div variants={fadeInUp} whileHover={{ scale: 1.05, y: -10 }} className="bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-lg border border-white flex flex-col items-center text-center transition-all h-full">
                 <div className="w-28 h-28 rounded-full bg-gradient-to-tr from-[var(--color-brand-gold)] to-pink-500 shadow-[0_0_20px_rgba(233,30,99,0.3)] mb-6 flex items-center justify-center text-white">
                   <Users size={40} />
                 </div>
-                <h4 className="text-xl font-bold text-[#0a2540] mb-2">{person.name}</h4>
-                <p className="text-[var(--color-brand-gold)] font-medium text-sm mb-4">{person.title}</p>
+                <h4 className="text-xl font-bold text-[#0a2540] mb-2">Prof. Dr. Víctor Ríos Ojeda</h4>
+                <p className="text-[var(--color-brand-gold)] font-medium text-sm mb-4">Chancellor</p>
                 <p className="text-xs text-gray-500 mt-auto pt-4 border-t w-full">Universidad Nacional de Pilar, Paraguay</p>
               </motion.div>
-            ))}
+            </div>
+            {/* Bottom Row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+              {[
+                { name: "Prof. Dra. Gladys Emilce Brítez Caballero", title: "Vice Chancellor" },
+                { name: "Ing. Agp. Víctor Armín Riveros Insaurralde", title: "Dean, College of Agricultural Sciences and Rural Development" },
+              ].map((person, i) => (
+                <motion.div variants={fadeInUp} whileHover={{ scale: 1.05, y: -10 }} key={i} className="bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-lg border border-white flex flex-col items-center text-center transition-all h-full">
+                  <div className="w-28 h-28 rounded-full bg-gradient-to-tr from-[var(--color-brand-gold)] to-pink-500 shadow-[0_0_20px_rgba(233,30,99,0.3)] mb-6 flex items-center justify-center text-white">
+                    <Users size={40} />
+                  </div>
+                  <h4 className="text-xl font-bold text-[#0a2540] mb-2">{person.name}</h4>
+                  <p className="text-[var(--color-brand-gold)] font-medium text-sm mb-4">{person.title}</p>
+                  <p className="text-xs text-gray-500 mt-auto pt-4 border-t w-full">Universidad Nacional de Pilar, Paraguay</p>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
