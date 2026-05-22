@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -38,6 +39,30 @@ export default function Navbar() {
   const [committeeDropdownOpen, setCommitteeDropdownOpen] = useState(false);
   const [mobileCommitteeOpen, setMobileCommitteeOpen] = useState(false);
 
+  const pathname = usePathname();
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const [path, hash] = href.split("#");
+    
+    const isSamePath = 
+      path === pathname || 
+      (path === "" && href.startsWith("#")) || 
+      (path === "/" && pathname === "/");
+
+    if (isSamePath) {
+      if (hash) {
+        const targetElement = document.getElementById(hash);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -60,7 +85,7 @@ export default function Navbar() {
         
         {/* Logos */}
         <div className="flex items-center space-x-4">
-          <Link href="/" className="flex items-center space-x-2 group">
+          <Link href="/" className="flex items-center space-x-2 group" onClick={(e) => handleLinkClick(e, "/")}>
             <motion.div whileHover={{ scale: 1.05 }} className="font-heading font-extrabold text-xl md:text-2xl tracking-tight text-[var(--color-brand-blue)] group-hover:text-[var(--color-brand-gold)] transition-colors whitespace-nowrap">
               ICBCLT <span className="text-[var(--color-brand-gold)] group-hover:text-pink-500 transition-colors">2026</span>
             </motion.div>
@@ -69,7 +94,7 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden xl:flex xl:space-x-1 2xl:space-x-2 items-center">
-          <Link href="/" className="px-2.5 xl:px-2.5 2xl:px-4 py-2 rounded-full text-sm xl:text-sm 2xl:text-base font-bold text-gray-700 hover:text-[var(--color-brand-blue)] hover:bg-blue-50 transition-all whitespace-nowrap">
+          <Link href="/" className="px-2.5 xl:px-2.5 2xl:px-4 py-2 rounded-full text-sm xl:text-sm 2xl:text-base font-bold text-gray-700 hover:text-[var(--color-brand-blue)] hover:bg-blue-50 transition-all whitespace-nowrap" onClick={(e) => handleLinkClick(e, "/")}>
             Home
           </Link>
           
@@ -97,6 +122,7 @@ export default function Navbar() {
                       key={link.name}
                       href={link.href}
                       className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-pink-50 hover:text-[var(--color-brand-blue)] transition-all"
+                      onClick={(e) => handleLinkClick(e, link.href)}
                     >
                       {link.name}
                     </Link>
@@ -130,6 +156,7 @@ export default function Navbar() {
                       key={link.name}
                       href={link.href}
                       className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-pink-50 hover:text-[var(--color-brand-blue)] transition-all"
+                      onClick={(e) => handleLinkClick(e, link.href)}
                     >
                       {link.name}
                     </Link>
@@ -144,12 +171,13 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               className="px-2.5 xl:px-2.5 2xl:px-4 py-2 rounded-full text-sm xl:text-sm 2xl:text-base font-bold text-gray-700 hover:text-[var(--color-brand-blue)] hover:bg-blue-50 transition-all whitespace-nowrap"
+              onClick={(e) => handleLinkClick(e, link.href)}
             >
               {link.name}
             </Link>
           ))}
           
-          <Link href="/registration">
+          <Link href="/registration" onClick={(e) => handleLinkClick(e, "/registration")}>
             <motion.div
               whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(233, 30, 99, 0.4)" }}
               whileTap={{ scale: 0.95 }}
@@ -182,7 +210,7 @@ export default function Navbar() {
             className="xl:hidden absolute top-full left-4 right-4 mt-2 bg-white/95 backdrop-blur-3xl shadow-2xl rounded-3xl border border-white/50 overflow-hidden z-40"
           >
             <div className="px-4 py-6 space-y-2 flex flex-col">
-              <Link href="/" className="block px-4 py-3 text-base font-bold text-gray-800 hover:bg-blue-50 rounded-xl transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
+              <Link href="/" className="block px-4 py-3 text-base font-bold text-gray-800 hover:bg-blue-50 rounded-xl transition-colors" onClick={(e) => handleLinkClick(e, "/")}>Home</Link>
               
               <div className="flex flex-col">
                 <button 
@@ -206,7 +234,7 @@ export default function Navbar() {
                             key={link.name}
                             href={link.href}
                             className="block py-2.5 text-sm font-medium text-gray-600 hover:text-[var(--color-brand-blue)] transition-colors"
-                            onClick={() => setIsOpen(false)}
+                            onClick={(e) => handleLinkClick(e, link.href)}
                           >
                             {link.name}
                           </Link>
@@ -239,7 +267,7 @@ export default function Navbar() {
                             key={link.name}
                             href={link.href}
                             className="block py-2.5 text-sm font-medium text-gray-600 hover:text-[var(--color-brand-blue)] transition-colors"
-                            onClick={() => setIsOpen(false)}
+                            onClick={(e) => handleLinkClick(e, link.href)}
                           >
                             {link.name}
                           </Link>
@@ -255,14 +283,14 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className="block px-4 py-3 text-base font-bold text-gray-800 hover:bg-blue-50 rounded-xl transition-colors"
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleLinkClick(e, link.href)}
                 >
                   {link.name}
                 </Link>
               ))}
               
               <div className="pt-4 px-2">
-                <Link href="/registration" onClick={() => setIsOpen(false)}>
+                <Link href="/registration" onClick={(e) => handleLinkClick(e, "/registration")}>
                   <div className="bg-gradient-to-r from-[var(--color-brand-gold)] to-pink-500 text-white w-full py-4 rounded-2xl text-center font-bold text-lg shadow-lg flex items-center justify-center">
                     Register Now <ArrowUpRight size={20} className="ml-2" />
                   </div>
