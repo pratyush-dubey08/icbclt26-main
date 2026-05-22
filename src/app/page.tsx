@@ -628,7 +628,7 @@ export default function Home() {
                     <img 
                       src={person.image} 
                       alt={person.name} 
-                      className={`w-full h-full object-cover relative z-10 ${person.name.includes("Bhatt") ? "object-top" : ""}`}
+                      className="w-full h-full object-cover relative z-10 object-center"
                       onError={(e) => {
                         (e.target as HTMLImageElement).style.display = 'none';
                       }}

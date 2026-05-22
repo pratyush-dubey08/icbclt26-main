@@ -128,20 +128,27 @@ export default function SpeakersPage() {
                 key={index} 
                 className="bg-white/10 backdrop-blur-xl rounded-[2rem] p-6 shadow-2xl border border-white/20 transition-all duration-300 group text-center flex flex-col items-center"
               >
-                <div className="w-32 h-32 rounded-full mb-6 bg-gradient-to-br from-indigo-500 to-pink-600 flex items-center justify-center text-white text-4xl font-bold shadow-[0_0_30px_rgba(233,30,99,0.4)] relative overflow-hidden transition-transform duration-500 border-2 border-white/20">
-                  {speaker.image ? (
-                    <img 
-                      src={speaker.image} 
-                      alt={speaker.name} 
-                      className={`w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-110 ${speaker.name.includes("Vinod Bhatt") ? "object-top" : ""}`}
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).style.display = 'none';
-                      }}
-                    />
-                  ) : null}
-                  <span className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold z-0 drop-shadow-md">{initials}</span>
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-20"></div>
-                  <Mic className="absolute bottom-2 right-2 text-white/40 z-20" size={24} />
+                <div className="w-32 h-32 mb-6 relative transition-transform duration-500 group-hover:scale-105">
+                  {/* Circular Image Container */}
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-indigo-500 to-pink-600 flex items-center justify-center text-white text-4xl font-bold shadow-[0_0_30px_rgba(233,30,99,0.3)] border-2 border-white/20 relative overflow-hidden">
+                    {speaker.image ? (
+                      <img 
+                        src={speaker.image} 
+                        alt={speaker.name} 
+                        className="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-110 object-center"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
+                    ) : null}
+                    <span className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold z-0 drop-shadow-md">{initials}</span>
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-20"></div>
+                  </div>
+
+                  {/* Speaker Mic Badge */}
+                  <div className="absolute -bottom-1 -right-1 bg-gradient-to-r from-[var(--color-brand-gold)] to-pink-500 text-white w-8 h-8 rounded-full shadow-[0_4px_12px_rgba(233,30,99,0.4)] border-2 border-[#1a103c] z-30 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
+                    <Mic size={14} className="text-white drop-shadow-sm" />
+                  </div>
                 </div>
                 
                 <h3 className="text-xl font-bold text-white mb-2 leading-snug">{speaker.name}</h3>
