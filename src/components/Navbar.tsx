@@ -10,7 +10,6 @@ const navLinks = [
   { name: "Call for Papers", href: "/call-for-papers" },
   { name: "Themes", href: "/themes" },
   { name: "Speakers", href: "/speakers" },
-  { name: "Registration", href: "/registration" },
   { name: "Contact Us", href: "/contact" },
 ];
 
@@ -49,14 +48,14 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-500 ease-in-out px-4 sm:px-6 lg:px-8 ${
-        scrolled ? "top-4" : "top-0 lg:top-4"
+      className={`fixed w-full z-50 transition-all duration-500 ease-in-out px-4 sm:px-6 xl:px-8 ${
+        scrolled ? "top-4" : "top-0 xl:top-4"
       }`}
     >
       <div className={`mx-auto transition-all duration-500 ease-in-out flex justify-between items-center ${
         scrolled 
-          ? "max-w-[95%] xl:max-w-7xl bg-white/80 backdrop-blur-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/50 rounded-2xl sm:rounded-full py-3 px-6 sm:px-8" 
-          : "max-w-[98%] xl:max-w-[85rem] bg-white/90 backdrop-blur-xl shadow-md border border-white/30 rounded-b-2xl lg:rounded-full py-4 px-6 sm:px-8"
+          ? "max-w-[95%] xl:max-w-7xl bg-white/80 backdrop-blur-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/50 rounded-2xl sm:rounded-full py-3 px-4 xl:px-5 2xl:px-8" 
+          : "max-w-[98%] xl:max-w-[85rem] bg-white/90 backdrop-blur-xl shadow-md border border-white/30 rounded-b-2xl xl:rounded-full py-4 px-4 xl:px-6 2xl:px-8"
       }`}>
         
         {/* Logos */}
@@ -69,8 +68,8 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex space-x-2 xl:space-x-4 items-center">
-          <Link href="/" className="px-4 py-2 rounded-full text-base font-bold text-gray-700 hover:text-[var(--color-brand-blue)] hover:bg-blue-50 transition-all whitespace-nowrap">
+        <nav className="hidden xl:flex xl:space-x-1 2xl:space-x-2 items-center">
+          <Link href="/" className="px-2.5 xl:px-2.5 2xl:px-4 py-2 rounded-full text-sm xl:text-sm 2xl:text-base font-bold text-gray-700 hover:text-[var(--color-brand-blue)] hover:bg-blue-50 transition-all whitespace-nowrap">
             Home
           </Link>
           
@@ -80,8 +79,8 @@ export default function Navbar() {
             onMouseEnter={() => setInfoDropdownOpen(true)}
             onMouseLeave={() => setInfoDropdownOpen(false)}
           >
-            <button className="flex items-center px-4 py-2 rounded-full text-base font-bold text-gray-700 hover:text-[var(--color-brand-blue)] hover:bg-blue-50 transition-all whitespace-nowrap">
-              Information <ChevronDown size={18} className={`ml-1 transition-transform duration-300 ${infoDropdownOpen ? "rotate-180" : ""}`} />
+            <button className="flex items-center px-2.5 xl:px-2.5 2xl:px-4 py-2 rounded-full text-sm xl:text-sm 2xl:text-base font-bold text-gray-700 hover:text-[var(--color-brand-blue)] hover:bg-blue-50 transition-all whitespace-nowrap">
+              Information <ChevronDown size={16} className={`ml-1 transition-transform duration-300 ${infoDropdownOpen ? "rotate-180" : ""}`} />
             </button>
             
             <AnimatePresence>
@@ -113,8 +112,8 @@ export default function Navbar() {
             onMouseEnter={() => setCommitteeDropdownOpen(true)}
             onMouseLeave={() => setCommitteeDropdownOpen(false)}
           >
-            <button className="flex items-center px-4 py-2 rounded-full text-base font-bold text-gray-700 hover:text-[var(--color-brand-blue)] hover:bg-blue-50 transition-all whitespace-nowrap">
-              Committees <ChevronDown size={18} className={`ml-1 transition-transform duration-300 ${committeeDropdownOpen ? "rotate-180" : ""}`} />
+            <button className="flex items-center px-2.5 xl:px-2.5 2xl:px-4 py-2 rounded-full text-sm xl:text-sm 2xl:text-base font-bold text-gray-700 hover:text-[var(--color-brand-blue)] hover:bg-blue-50 transition-all whitespace-nowrap">
+              Committees <ChevronDown size={16} className={`ml-1 transition-transform duration-300 ${committeeDropdownOpen ? "rotate-180" : ""}`} />
             </button>
             
             <AnimatePresence>
@@ -144,7 +143,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="px-4 py-2 rounded-full text-base font-bold text-gray-700 hover:text-[var(--color-brand-blue)] hover:bg-blue-50 transition-all whitespace-nowrap"
+              className="px-2.5 xl:px-2.5 2xl:px-4 py-2 rounded-full text-sm xl:text-sm 2xl:text-base font-bold text-gray-700 hover:text-[var(--color-brand-blue)] hover:bg-blue-50 transition-all whitespace-nowrap"
             >
               {link.name}
             </Link>
@@ -154,15 +153,15 @@ export default function Navbar() {
             <motion.div
               whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(233, 30, 99, 0.4)" }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-[var(--color-brand-gold)] to-pink-500 text-white px-6 py-2.5 rounded-full text-base font-bold shadow-md ml-2 flex items-center group cursor-pointer whitespace-nowrap"
+              className="bg-gradient-to-r from-[var(--color-brand-gold)] to-pink-500 text-white px-4 xl:px-4 2xl:px-6 py-2 xl:py-2 2xl:py-2.5 rounded-full text-sm xl:text-sm 2xl:text-base font-bold shadow-md ml-2 xl:ml-1.5 2xl:ml-2.5 flex items-center group cursor-pointer whitespace-nowrap"
             >
-              Register Now <ArrowUpRight size={18} className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              Register Now <ArrowUpRight size={16} className="ml-1 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </motion.div>
           </Link>
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="lg:hidden flex items-center">
+        <div className="xl:hidden flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-gray-700 hover:text-[var(--color-brand-blue)] focus:outline-none p-2 bg-gray-50 rounded-full"
@@ -180,7 +179,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0, height: "auto" }}
             exit={{ opacity: 0, y: -20, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden absolute top-full left-4 right-4 mt-2 bg-white/95 backdrop-blur-3xl shadow-2xl rounded-3xl border border-white/50 overflow-hidden z-40"
+            className="xl:hidden absolute top-full left-4 right-4 mt-2 bg-white/95 backdrop-blur-3xl shadow-2xl rounded-3xl border border-white/50 overflow-hidden z-40"
           >
             <div className="px-4 py-6 space-y-2 flex flex-col">
               <Link href="/" className="block px-4 py-3 text-base font-bold text-gray-800 hover:bg-blue-50 rounded-xl transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
