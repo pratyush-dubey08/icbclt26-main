@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import GoogleTranslate from "./GoogleTranslate";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -178,10 +177,6 @@ export default function Navbar() {
             </Link>
           ))}
           
-          <div className="ml-2 xl:ml-1.5 2xl:ml-2.5 flex items-center">
-            <GoogleTranslate />
-          </div>
-          
           <Link href="/registration" onClick={(e) => handleLinkClick(e, "/registration")}>
             <motion.div
               whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(233, 30, 99, 0.4)" }}
@@ -293,11 +288,6 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              
-              <div className="px-4 py-2 border-t border-gray-100 flex items-center justify-between">
-                <span className="text-sm font-bold text-gray-500">Website Language</span>
-                <GoogleTranslate />
-              </div>
               
               <div className="pt-4 px-2">
                 <Link href="/registration" onClick={(e) => handleLinkClick(e, "/registration")}>
