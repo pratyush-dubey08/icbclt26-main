@@ -391,7 +391,8 @@ export default function Home() {
                     },
                     { 
                       name: "Mrs. Ramni Balasundaram", 
-                      title: "Trustee" 
+                      title: "Trustee",
+                      image: "/Images/Ramni Balasundaram.png"
                     },
                   ].map((person, i) => (
                     <motion.div variants={fadeInUp} whileHover={{ scale: 1.03, y: -5 }} key={i} className="flex items-center space-x-4 lg:space-x-6 p-4 rounded-3xl bg-white/60 backdrop-blur-xl border border-white shadow-lg hover:shadow-xl transition-all">
@@ -565,8 +566,18 @@ export default function Home() {
           <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <motion.div variants={fadeInUp} whileHover={{ scale: 1.02 }} className="bg-gradient-to-br from-[#0a2540] to-indigo-900 text-white p-10 rounded-3xl shadow-2xl flex flex-col sm:flex-row items-center text-center sm:text-left gap-8 border border-white/10 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brand-gold)]/20 rounded-bl-full blur-2xl"></div>
-              <div className="w-32 h-32 rounded-full bg-white/10 shadow-inner flex items-center justify-center flex-shrink-0 text-[var(--color-brand-gold-light)] relative z-10 backdrop-blur-sm border border-white/20">
-                 <Users size={48} />
+              <div className="w-32 h-32 rounded-full bg-white/10 shadow-inner flex items-center justify-center flex-shrink-0 text-[var(--color-brand-gold-light)] relative z-10 backdrop-blur-sm border border-white/20 overflow-hidden border border-gray-100">
+                 <img 
+                   src="/Images/Dr. Hemant Nashine.png" 
+                   alt="Dr. Hemant Nashine" 
+                   className="w-full h-full object-cover relative z-10"
+                   onError={(e) => {
+                     (e.target as HTMLImageElement).style.display = 'none';
+                   }}
+                 />
+                 <div className="absolute inset-0 flex items-center justify-center text-[var(--color-brand-gold-light)] z-0">
+                   <Users size={48} />
+                 </div>
               </div>
               <div className="relative z-10">
                 <h3 className="text-[var(--color-brand-gold)] font-bold mb-2 uppercase tracking-wide text-sm">Conference Chair</h3>
@@ -591,15 +602,41 @@ export default function Home() {
           <h3 id="conveners" className="text-2xl font-bold text-center text-[var(--color-brand-blue)] mb-10 uppercase tracking-wider">Conveners</h3>
           <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
-              { name: "Dr. Vinod Bhatt", title: "Associate Professor, SASL, VIT Bhopal University" },
-              { name: "Dr. Dev Brat Gupta", title: "Assistant Professor, SASL, VIT Bhopal University" },
-              { name: "Magister Graciela Barrios", title: "Chief of Staff, College of Agriculture Engineering and Rural Development, UN - PILAR" },
-              { name: "Lic. Maria Lourdes Coronel Caballero", title: "General Director for Coordination and Strategic Planning" },
+              { 
+                name: "Dr. Vinod Bhatt", 
+                title: "Associate Professor, SASL, VIT Bhopal University",
+                image: "/Images/Dr. Vinod Bhatt.png"
+              },
+              { 
+                name: "Dr. Dev Brat Gupta", 
+                title: "Assistant Professor, SASL, VIT Bhopal University",
+                image: "/Images/Dr. Dev Brat Gupta.png"
+              },
+              { 
+                name: "Magister Graciela Barrios", 
+                title: "Chief of Staff, College of Agriculture Engineering and Rural Development, UN - PILAR" 
+              },
+              { 
+                name: "Lic. Maria Lourdes Coronel Caballero", 
+                title: "General Director for Coordination and Strategic Planning" 
+              },
             ].map((person, i) => (
               <motion.div variants={fadeInUp} whileHover={{ y: -10, scale: 1.02 }} key={i} className="bg-gradient-to-br from-[#0a2540] to-indigo-900 text-white p-6 rounded-3xl shadow-lg text-center flex flex-col items-center transition-all group border border-white/10 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--color-brand-gold)]/10 rounded-bl-full blur-xl"></div>
-                <div className="w-24 h-24 rounded-full bg-white/10 shadow-inner mb-4 flex items-center justify-center text-[var(--color-brand-gold-light)] group-hover:scale-110 transition-transform duration-300 border border-white/20 relative z-10">
-                  <Users size={32} />
+                <div className="w-24 h-24 rounded-full bg-white/10 shadow-inner mb-4 flex items-center justify-center text-[var(--color-brand-gold-light)] group-hover:scale-110 transition-transform duration-300 border border-white/20 relative z-10 overflow-hidden border border-gray-100/50">
+                  {person.image ? (
+                    <img 
+                      src={person.image} 
+                      alt={person.name} 
+                      className={`w-full h-full object-cover relative z-10 ${person.name.includes("Bhatt") ? "object-top" : ""}`}
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                  ) : null}
+                  <div className="absolute inset-0 flex items-center justify-center text-[var(--color-brand-gold-light)] z-0">
+                    <Users size={32} />
+                  </div>
                 </div>
                 <h4 className="text-lg font-bold text-white mb-2 relative z-10">{person.name}</h4>
                 <p className="text-[var(--color-brand-gold-light)] font-medium text-xs mb-4 leading-relaxed relative z-10">{person.title}</p>
