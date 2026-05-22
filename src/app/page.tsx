@@ -310,7 +310,7 @@ export default function Home() {
                 "To encourage interdisciplinary research across business, economics, humanities, international studies and technology",
                 "To provide a platform for knowledge sharing between academia and industry",
                 "To promote cross-cultural understanding in global organizational contexts",
-                "Provide an International Forum in support of India - Paraguay partnership on: agricultural engineering, soil treatment, international commerce, sustainable livestock grazing, conservation of fresh water resources in the Department of Ñeembucú and promote bilateral economic diplomacy. Develop Cultural Diplomacy Projects that benefit Eurasia and Latin America."
+                "Promote an India–Paraguay forum on agriculture, trade, water conservation, sustainable grazing, and economic diplomacy, while fostering Eurasia–Latin America cultural ties."
               ].map((objective, idx) => (
                 <motion.li 
                   variants={fadeInUp}
@@ -682,8 +682,8 @@ export default function Home() {
                 "Prof.Gajendra K. Vishwakarma, Associate Professor, Statistics, Department of Mathematics & Computing, Indian Institute of Technology (ISM) Dhanbad, India",
                 "Prof. (Dr.) Akash Saxena, Professor, School of Engineering and Technology, Central University of Haryana, Haryana, India",
                 "Sangeeta Menon, Publishing Leader, Journal Portfolio Growth & Indexing Strategy, South Asia Market Expansion, Ex-Elsevier, Wiley, Taylor & Francis",
-                "Saad Ahmed",
-                "Mukti Upadhayay",
+                "Dr. Shad Ahmad Khan, Associate Professor, American University of Phnom Penh, Cambodia, Dedicated Campus Colleague, University of Arizona, USA",
+                "Dr. Mukti Upadhyay, Associate Professor, Department of English Language and Literature, Shaqra University, Ministry of Education, Kingdom of Saudi Arabia",
                 "Professor Mushtak Al-Atabi, CEO, Heriot-Watt University, Malaysia; Honorary Chair, School of Mechanical Engineering, University of Birmingham (UK), Editor-in-Chief, Journal of Engineering Science & Technology.",
                 "The Honorable Luis Adolfo Chamorro, Entrepreneur, Globally Renowned Public Speaker, Environmentalist and Pilot.",
                 "The Honorable Professor Rodolfo Grau Brizuela, President, ARP San Pedro; Dean, Faculty of Agricultural Engineering, Rural University, Paraguay",

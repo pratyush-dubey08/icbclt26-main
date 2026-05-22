@@ -65,7 +65,7 @@ export default function CallForPapersPage() {
             <div className="bg-gradient-to-br from-[var(--color-brand-blue)] to-indigo-600 p-4 rounded-2xl text-white shadow-lg">
               <CalendarDays size={32} />
             </div>
-            <h2 className="text-3xl font-bold text-[#0a2540]">Things to remember:-</h2>
+            <h2 className="text-3xl font-bold text-[#0a2540]">Things to remember</h2>
           </div>
           
           <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" className="space-y-6">

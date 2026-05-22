@@ -137,21 +137,6 @@ export default function ContactPage() {
                     <p className="text-sm font-bold text-[#0a2540]">{contact.phone}</p>
                   </div>
                 </a>
-
-                <a 
-                  href={`https://wa.me/${contact.rawPhone.replace('+', '')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-3 p-4 bg-white/80 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-md transition-all group/btn"
-                >
-                  <div className="p-2.5 rounded-xl bg-green-50 text-green-500 group-hover/btn:scale-110 transition-transform">
-                    <MessageSquare size={18} />
-                  </div>
-                  <div>
-                    <p className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">WhatsApp Message</p>
-                    <p className="text-sm font-bold text-green-600">Chat Now</p>
-                  </div>
-                </a>
               </div>
             </motion.div>
           ))}
@@ -172,7 +157,7 @@ export default function ContactPage() {
             <div>
               <h3 className="text-2xl font-bold text-[var(--color-brand-gold-light)] mb-4 uppercase tracking-wide">Official Email</h3>
               <p className="text-gray-300 leading-relaxed mb-6 font-light text-base">
-                For formal enquiries, official letters of invitation, proposal sponsorships, and academic collaboration files, please write directly to our official desk.
+                For any inquiries regarding the conference, registration, or academic collaborations, please email us directly.
               </p>
               <a 
                 href="mailto:icbclt2026@vitbhopal.ac.in" 
