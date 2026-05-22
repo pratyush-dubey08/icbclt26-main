@@ -24,11 +24,11 @@ export default function Footer() {
             <h3 className="text-lg font-heading font-bold mb-4 text-[var(--color-brand-gold)]">Quick Links</h3>
             <ul className="space-y-2">
               {[
-                { name: "About Conference", href: "/about" },
+                { name: "About Conference", href: "/#about-conference" },
                 { name: "Themes & Sub-Themes", href: "/themes" },
                 { name: "Call for Papers", href: "/call-for-papers" },
                 { name: "Registration", href: "/registration" },
-                { name: "Committee", href: "/committee" },
+                { name: "Contact Us", href: "/contact" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="text-gray-300 hover:text-white hover:underline text-sm transition-colors">
@@ -52,7 +52,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="text-[var(--color-brand-gold)] shrink-0" size={18} />
-                <a href="mailto:info@icbclt2026.org" className="hover:text-white">info@icbclt2026.org</a>
+                <a href="mailto:icbclt2026@vitbhopal.ac.in" className="hover:text-white">icbclt2026@vitbhopal.ac.in</a>
               </li>
             </ul>
           </div>

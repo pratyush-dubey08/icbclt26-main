@@ -11,17 +11,24 @@ const navLinks = [
   { name: "Themes", href: "/themes" },
   { name: "Speakers", href: "/speakers" },
   { name: "Registration", href: "/registration" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 const infoLinks = [
-  { name: "About Conference", href: "/#about-conference" },
   { name: "About VIT Bhopal University", href: "/#about-vit" },
   { name: "About Universidad Nacional de Pilar", href: "/#about-unp" },
-  { name: "Rationale for Organising the Conference", href: "/#rationale" },
+  { name: "About Conference", href: "/#about-conference" },
   { name: "Conference Objective", href: "/#objectives" },
   { name: "VIT Bhopal University Leadership", href: "/#vit-leadership" },
   { name: "National University of Pilar Leadership", href: "/#unp-leadership" },
   { name: "Conference Leads", href: "/#conference-leads" },
+];
+
+const committeeLinks = [
+  { name: "Conveners", href: "/#conveners" },
+  { name: "Organizing Committee - VIT Bhopal University", href: "/#org-vit" },
+  { name: "Organizing Committee - University of Pilar", href: "/#org-unp" },
+  { name: "Conference Advisory Committee", href: "/#advisory" },
 ];
 
 export default function Navbar() {
@@ -29,6 +36,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [infoDropdownOpen, setInfoDropdownOpen] = useState(false);
   const [mobileInfoOpen, setMobileInfoOpen] = useState(false);
+  const [committeeDropdownOpen, setCommitteeDropdownOpen] = useState(false);
+  const [mobileCommitteeOpen, setMobileCommitteeOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,7 +97,40 @@ export default function Navbar() {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-pink-50 hover:text-[var(--color-brand-blue)] transition-all whitespace-nowrap"
+                      className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-pink-50 hover:text-[var(--color-brand-blue)] transition-all"
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Committees Dropdown */}
+          <div 
+            className="relative group"
+            onMouseEnter={() => setCommitteeDropdownOpen(true)}
+            onMouseLeave={() => setCommitteeDropdownOpen(false)}
+          >
+            <button className="flex items-center px-4 py-2 rounded-full text-base font-bold text-gray-700 hover:text-[var(--color-brand-blue)] hover:bg-blue-50 transition-all whitespace-nowrap">
+              Committees <ChevronDown size={18} className={`ml-1 transition-transform duration-300 ${committeeDropdownOpen ? "rotate-180" : ""}`} />
+            </button>
+            
+            <AnimatePresence>
+              {committeeDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  className="absolute top-[120%] left-1/2 -translate-x-1/2 w-80 bg-white/90 backdrop-blur-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)] rounded-2xl py-3 border border-white/50 overflow-hidden"
+                >
+                  {committeeLinks.map((link, i) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-pink-50 hover:text-[var(--color-brand-blue)] transition-all"
                     >
                       {link.name}
                     </Link>
@@ -161,6 +203,39 @@ export default function Navbar() {
                     >
                       <div className="space-y-1 border-l-2 border-gray-200 ml-6 pl-4 my-2">
                         {infoLinks.map((link) => (
+                          <Link
+                            key={link.name}
+                            href={link.href}
+                            className="block py-2.5 text-sm font-medium text-gray-600 hover:text-[var(--color-brand-blue)] transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {link.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              <div className="flex flex-col">
+                <button 
+                  onClick={() => setMobileCommitteeOpen(!mobileCommitteeOpen)}
+                  className="flex items-center justify-between w-full text-base font-bold text-gray-800 hover:bg-blue-50 py-3 px-4 rounded-xl transition-colors"
+                >
+                  <span>Committees</span>
+                  <ChevronDown size={20} className={`transition-transform duration-300 ${mobileCommitteeOpen ? "rotate-180" : ""}`} />
+                </button>
+                <AnimatePresence>
+                  {mobileCommitteeOpen && (
+                    <motion.div 
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="space-y-1 border-l-2 border-gray-200 ml-6 pl-4 my-2">
+                        {committeeLinks.map((link) => (
                           <Link
                             key={link.name}
                             href={link.href}

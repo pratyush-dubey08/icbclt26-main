@@ -63,8 +63,7 @@ export default function ThemesPage() {
         "Influencer communication and digital narratives",
         "New media advertising and consumer engagement",
         "Ethical issues in digital communication",
-        "Misinformation, fake news, and media literacy",
-        "Soft Power"
+        "Misinformation, fake news, and media literacy"
       ]
     },
     {

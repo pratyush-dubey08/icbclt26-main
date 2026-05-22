@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* About Conference (Organisers) */}
-      <section id="about-conference" className="py-24 bg-gradient-to-br from-indigo-50 via-white to-pink-50 relative overflow-hidden z-10">
+      <section id="organizers" className="py-24 bg-gradient-to-br from-indigo-50 via-white to-pink-50 relative overflow-hidden z-10">
         <motion.div 
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -182,7 +182,7 @@ export default function Home() {
                     <Image src="/vit-logo.png" alt="VIT Logo Icon" fill className="object-contain" />
                   </div>
                 </motion.div>
-                <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">Vellore Institute of Technology (VIT) Bhopal University</h2>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">VIT Bhopal University</h2>
               </div>
             </div>
             <div className="text-lg md:text-xl text-gray-200 space-y-5 text-left md:text-justify leading-relaxed font-light mt-8 px-2 md:px-0">
@@ -240,8 +240,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Rationale */}
-      <section id="rationale" className="py-16 bg-gradient-to-b from-[#1a103c] via-[#7B1FA2] to-[#E91E63] text-white relative overflow-hidden">
+      {/* About the Conference */}
+      <section id="about-conference" className="py-16 bg-gradient-to-b from-[#1a103c] via-[#7B1FA2] to-[#E91E63] text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -250,9 +250,9 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block px-4 py-1.5 rounded-full bg-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 border border-white/30 shadow-sm backdrop-blur-md">
-              Rationale
+              About the Conference
             </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-10 leading-tight">Organising the III International Conference</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-10 leading-tight">About the Conference</h2>
             <div className="text-lg md:text-xl text-white/95 max-w-5xl mx-auto space-y-5 text-left md:text-justify leading-relaxed font-light mt-12 drop-shadow-md px-2 md:px-0">
               <p>
                 The association of business, culture, language, and technology has become a crucial area affecting innovation ecosystems, cross-border cooperation, international economics and organizational efficacy in today's fractured world. The quick development of digital technology, artificial intelligence, and platform economics has completely changed how people communicate in a variety of linguistic and cultural contexts.
@@ -343,7 +343,9 @@ export default function Home() {
               <Image src="/vit-logo.png" alt="" width={150} height={150} className="object-contain grayscale" />
             </div>
             <Award className="text-[var(--color-brand-gold)] mx-auto mb-4 relative z-10" size={48} />
-            <h2 className="text-4xl font-bold text-[#0a2540] mb-4 relative z-10">VIT Bhopal University Leadership</h2>
+            <h2 className="text-4xl font-bold text-[#0a2540] mb-4 relative z-10">
+              Leadership<span className="block text-2xl mt-2 font-normal text-gray-500">VIT Bhopal University</span>
+            </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[var(--color-brand-blue)] to-[var(--color-brand-gold)] mx-auto rounded-full relative z-10"></div>
           </motion.div>
           
@@ -448,7 +450,9 @@ export default function Home() {
               <Image src="/unp-logo.png" alt="" width={150} height={150} className="object-contain grayscale" />
             </div>
             <Award className="text-[var(--color-brand-gold)] mx-auto mb-4 relative z-10" size={48} />
-            <h2 className="text-4xl font-bold text-[#0a2540] mb-4 relative z-10">National University of Pilar Leadership</h2>
+            <h2 className="text-4xl font-bold text-[#0a2540] mb-4 relative z-10">
+              Leadership<span className="block text-2xl mt-2 font-normal text-gray-500">University of Pilar</span>
+            </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[var(--color-brand-blue)] to-[var(--color-brand-gold)] mx-auto rounded-full relative z-10"></div>
           </motion.div>
           
@@ -512,7 +516,7 @@ export default function Home() {
               <div className="relative z-10">
                 <h3 className="text-[var(--color-brand-gold)] font-bold mb-2 uppercase tracking-wide text-sm">Conference Chair</h3>
                 <h4 className="text-2xl font-bold mb-2">Dr. Hemant Nashine</h4>
-                <p className="text-gray-300">Dean, SASL, VIT Bhopal University</p>
+                <p className="text-gray-300">Dean, School of Advanced Sciences and Languages (SASL), VIT Bhopal University</p>
               </div>
             </motion.div>
             
@@ -529,20 +533,21 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          <h3 className="text-2xl font-bold text-center text-[var(--color-brand-blue)] mb-10 uppercase tracking-wider">Conveners</h3>
-          <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h3 id="conveners" className="text-2xl font-bold text-center text-[var(--color-brand-blue)] mb-10 uppercase tracking-wider">Conveners</h3>
+          <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
               { name: "Dr. Vinod Bhatt", title: "Associate Professor, SASL, VIT Bhopal University" },
-              { name: "Magister Graciela Barrios", title: "Chief of Staff, College of Agriculture Engineering and Rural Development, UN - PILAR" },
               { name: "Dr. Dev Brat Gupta", title: "Assistant Professor, SASL, VIT Bhopal University" },
+              { name: "Magister Graciela Barrios", title: "Chief of Staff, College of Agriculture Engineering and Rural Development, UN - PILAR" },
               { name: "Lic. Maria Lourdes Coronel Caballero", title: "General Director for Coordination and Strategic Planning" },
             ].map((person, i) => (
-              <motion.div variants={fadeInUp} whileHover={{ y: -10, scale: 1.02 }} key={i} className="bg-white border border-gray-100 p-6 rounded-3xl shadow-lg text-center flex flex-col items-center transition-all group">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-tr from-gray-100 to-gray-200 shadow-inner mb-4 flex items-center justify-center text-[var(--color-brand-blue)] group-hover:bg-gradient-to-tr group-hover:from-[var(--color-brand-blue)] group-hover:to-indigo-500 group-hover:text-white transition-all duration-300">
+              <motion.div variants={fadeInUp} whileHover={{ y: -10, scale: 1.02 }} key={i} className="bg-gradient-to-br from-[#0a2540] to-indigo-900 text-white p-6 rounded-3xl shadow-lg text-center flex flex-col items-center transition-all group border border-white/10 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--color-brand-gold)]/10 rounded-bl-full blur-xl"></div>
+                <div className="w-24 h-24 rounded-full bg-white/10 shadow-inner mb-4 flex items-center justify-center text-[var(--color-brand-gold-light)] group-hover:scale-110 transition-transform duration-300 border border-white/20 relative z-10">
                   <Users size={32} />
                 </div>
-                <h4 className="text-lg font-bold text-[#0a2540] mb-2">{person.name}</h4>
-                <p className="text-[var(--color-brand-gold)] font-medium text-xs mb-4 leading-relaxed">{person.title}</p>
+                <h4 className="text-lg font-bold text-white mb-2 relative z-10">{person.name}</h4>
+                <p className="text-[var(--color-brand-gold-light)] font-medium text-xs mb-4 leading-relaxed relative z-10">{person.title}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -576,7 +581,6 @@ export default function Home() {
                   "Dr. Pon Harshavardhanan, Dean, School of Computing Science Engineering & Artificial Intelligence, VIT Bhopal University, India",
                   "Dr. Dr. S. Balaguru, Dean, School of Mechanical Engineering, VIT Bhopal University, India",
                   "Dr. Sheetal Sharma, Dean, School of Architecture, VIT Bhopal University, India",
-                  "Dr. Bhakti Parashar, Assistant Dean, VIT Business School, VIT Bhopal University, India",
                   "Dr. Anita Yadav, Assistant Professor, SASL, VIT Bhopal University",
                   "Dr. Rajeev Saxena, Assistant Professor, SASL, VIT Bhopal University",
                   "Dr. Tauseef Qamar, Assistant Professor, SASL, VIT Bhopal University",
@@ -645,7 +649,7 @@ export default function Home() {
       </section>
 
       {/* Advisory Committee */}
-      <section className="py-24 bg-gradient-to-b from-[#0a2540] to-black relative overflow-hidden">
+      <section id="advisory" className="py-24 bg-gradient-to-b from-[#0a2540] to-black relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
            <motion.div 
              animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.2, 0.1] }}
@@ -676,6 +680,7 @@ export default function Home() {
                 "Prof. Dr. Victor Britez Chamorro, Emeritus Chancellor, National University of the East, Paraguay.",
                 "Prof. (Dr.) Sumit Narula, Dean, Times School of Media, Bennett University, India",
                 "Prof.Gajendra K. Vishwakarma, Associate Professor, Statistics, Department of Mathematics & Computing, Indian Institute of Technology (ISM) Dhanbad, India",
+                "Prof. (Dr.) Akash Saxena, Professor, School of Engineering and Technology, Central University of Haryana, Haryana, India",
                 "Sangeeta Menon, Publishing Leader, Journal Portfolio Growth & Indexing Strategy, South Asia Market Expansion, Ex-Elsevier, Wiley, Taylor & Francis",
                 "Saad Ahmed",
                 "Mukti Upadhayay",
