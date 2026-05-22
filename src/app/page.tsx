@@ -356,8 +356,16 @@ export default function Home() {
                 {/* Center Top */}
                 <div className="w-full md:w-[48%]">
                   <motion.div variants={fadeInUp} whileHover={{ scale: 1.03, y: -5 }} className="flex items-center space-x-6 p-4 rounded-3xl bg-white/60 backdrop-blur-xl border border-white shadow-lg hover:shadow-xl transition-all">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-[var(--color-brand-blue)] to-indigo-600 shadow-inner flex-shrink-0 overflow-hidden relative">
-                      <div className="absolute inset-0 flex items-center justify-center text-white/50">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-[var(--color-brand-blue)] to-indigo-600 shadow-inner flex-shrink-0 overflow-hidden relative border border-gray-100">
+                      <img 
+                        src="https://vitbhopal.ac.in/wp-content/uploads/2024/11/chansllor-1.jpg" 
+                        alt="Dr. G. Viswanathan" 
+                        className="w-full h-full object-cover relative z-10"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center text-white/50 z-0">
                         <Users size={32} />
                       </div>
                     </div>
@@ -371,13 +379,34 @@ export default function Home() {
                 {/* Bottom Row */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
                   {[
-                    { name: "Dr. Sankar Viswanathan", title: "Vice President" },
-                    { name: "Ms. Kadhambari S. Viswanathan", title: "Assistant Vice President" },
-                    { name: "Mrs. Ramni Balasundaram", title: "Trustee" },
+                    { 
+                      name: "Dr. Sankar Viswanathan", 
+                      title: "Vice President",
+                      image: "https://vitbhopal.ac.in/wp-content/uploads/2024/11/Mr.-Sankar-Viswanathan-21.jpg"
+                    },
+                    { 
+                      name: "Ms. Kadhambari S. Viswanathan", 
+                      title: "Assistant Vice President",
+                      image: "https://vitbhopal.ac.in/wp-content/uploads/2024/11/avp-new-1-21.jpg"
+                    },
+                    { 
+                      name: "Mrs. Ramni Balasundaram", 
+                      title: "Trustee" 
+                    },
                   ].map((person, i) => (
                     <motion.div variants={fadeInUp} whileHover={{ scale: 1.03, y: -5 }} key={i} className="flex items-center space-x-4 lg:space-x-6 p-4 rounded-3xl bg-white/60 backdrop-blur-xl border border-white shadow-lg hover:shadow-xl transition-all">
-                      <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gradient-to-tr from-[var(--color-brand-blue)] to-indigo-600 shadow-inner flex-shrink-0 overflow-hidden relative">
-                        <div className="absolute inset-0 flex items-center justify-center text-white/50">
+                      <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gradient-to-tr from-[var(--color-brand-blue)] to-indigo-600 shadow-inner flex-shrink-0 overflow-hidden relative border border-gray-100">
+                        {person.image ? (
+                          <img 
+                            src={person.image} 
+                            alt={person.name} 
+                            className="w-full h-full object-cover relative z-10"
+                            onError={(e) => {
+                              (e.target as HTMLImageElement).style.display = 'none';
+                            }}
+                          />
+                        ) : null}
+                        <div className="absolute inset-0 flex items-center justify-center text-white/50 z-0">
                           <Users size={28} />
                         </div>
                       </div>
@@ -398,8 +427,16 @@ export default function Home() {
                 {/* Center Top */}
                 <div className="w-full md:w-[48%]">
                   <motion.div variants={fadeInUp} whileHover={{ scale: 1.03, y: -5 }} className="flex items-center space-x-6 p-4 rounded-3xl bg-white/60 backdrop-blur-xl border border-white shadow-lg hover:shadow-xl transition-all">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-[var(--color-brand-blue)] to-indigo-600 shadow-inner flex-shrink-0 overflow-hidden relative">
-                      <div className="absolute inset-0 flex items-center justify-center text-white/50">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-[var(--color-brand-blue)] to-indigo-600 shadow-inner flex-shrink-0 overflow-hidden relative border border-gray-100">
+                      <img 
+                        src="https://vitbhopal.ac.in/wp-content/uploads/2026/03/VC-satish-modh.jpg" 
+                        alt="Prof. Satish Kumar Modh" 
+                        className="w-full h-full object-cover relative z-10"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center text-white/50 z-0">
                         <Users size={32} />
                       </div>
                     </div>
@@ -413,12 +450,30 @@ export default function Home() {
                 {/* Bottom Row */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
                   {[
-                    { name: "Prof. T. B. Sridharan", title: "Pro-Vice Chancellor" },
-                    { name: "Mr. KK Nair", title: "Acting Registrar" },
+                    { 
+                      name: "Prof. T. B. Sridharan", 
+                      title: "Pro-Vice Chancellor",
+                      image: "https://vitbhopal.ac.in/wp-content/uploads/2025/01/11zon_cropped_11zon.jpeg"
+                    },
+                    { 
+                      name: "Mr. KK Nair", 
+                      title: "Acting Registrar",
+                      image: "https://vitbhopal.ac.in/wp-content/uploads/2024/11/New-Project-1.jpg"
+                    },
                   ].map((person, i) => (
                     <motion.div variants={fadeInUp} whileHover={{ scale: 1.03, y: -5 }} key={i} className="flex items-center space-x-6 p-4 rounded-3xl bg-white/60 backdrop-blur-xl border border-white shadow-lg hover:shadow-xl transition-all">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-[var(--color-brand-blue)] to-indigo-600 shadow-inner flex-shrink-0 overflow-hidden relative">
-                        <div className="absolute inset-0 flex items-center justify-center text-white/50">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-[var(--color-brand-blue)] to-indigo-600 shadow-inner flex-shrink-0 overflow-hidden relative border border-gray-100">
+                        {person.image ? (
+                          <img 
+                            src={person.image} 
+                            alt={person.name} 
+                            className="w-full h-full object-cover relative z-10"
+                            onError={(e) => {
+                              (e.target as HTMLImageElement).style.display = 'none';
+                            }}
+                          />
+                        ) : null}
+                        <div className="absolute inset-0 flex items-center justify-center text-white/50 z-0">
                           <Users size={32} />
                         </div>
                       </div>

@@ -19,14 +19,54 @@ const staggerContainer = {
 
 export default function SpeakersPage() {
   const speakers = [
-    { name: "PROF. ING. HÉCTOR RUBÉN PAZ", title: "", country: "" },
-    { name: "JAMES MCCAULLEY", title: "Former Mayor", country: "Dodgeville, Wisconsin, USA" },
-    { name: "The Honorable Samuel Wiens", title: "Entrepreneur and Leadership Development Speaker", country: "Paraguay" },
-    { name: "Dr. Vinod Bhatt", title: "Associate Professor", country: "VIT Bhopal University" },
-    { name: "Prof. Dr. STEVE H. HANKE", title: "", country: "" },
-    { name: "LUIS ADOLFO CHAMORRO", title: "President, CIERSE S. R. L. and Eliora Honey", country: "Paraguay" },
-    { name: "Dr. Juan Ramon Bueno Jara", title: "Attorney and national business leader in Real Estate", country: "Paraguay" },
-    { name: "Ashok Kumar Selliah", title: "Business Leader in Real Estate and Construction", country: "Canada - Sri Lanka" },
+    { 
+      name: "PROF. ING. HÉCTOR RUBÉN PAZ", 
+      title: "", 
+      country: "", 
+      image: "/Images/PROF. ING. HÉCTOR RUBÉN PAZ.png" 
+    },
+    { 
+      name: "JAMES MCCAULLEY", 
+      title: "Former Mayor", 
+      country: "Dodgeville, Wisconsin, USA", 
+      image: "/Images/JAMES MCCAULLEY.png" 
+    },
+    { 
+      name: "The Honorable Samuel Wiens", 
+      title: "Entrepreneur and Leadership Development Speaker", 
+      country: "Paraguay", 
+      image: "/Images/the Honorable Samuel Wiens, Entrepreneur and Leadership Development Speaker, Paraguay.png" 
+    },
+    { 
+      name: "Dr. Vinod Bhatt", 
+      title: "Associate Professor", 
+      country: "VIT Bhopal University", 
+      image: "/Images/Dr. Vinod Bhatt.png" 
+    },
+    { 
+      name: "Prof. Dr. STEVE H. HANKE", 
+      title: "", 
+      country: "", 
+      image: "/Images/Prof. Dr. STEVE H. HANKE.png" 
+    },
+    { 
+      name: "LUIS ADOLFO CHAMORRO", 
+      title: "President, CIERSE S. R. L. and Eliora Honey", 
+      country: "Paraguay", 
+      image: "/Images/LUIS ADOLFO CHAMORRO.png" 
+    },
+    { 
+      name: "Dr. Juan Ramon Bueno Jara", 
+      title: "Attorney and national business leader in Real Estate", 
+      country: "Paraguay", 
+      image: "/Images/Dr. Juan Ramon Bueno Jara.png" 
+    },
+    { 
+      name: "Ashok Kumar Selliah", 
+      title: "Business Leader in Real Estate and Construction", 
+      country: "Canada - Sri Lanka", 
+      image: "/Images/Ashok Kumar Selliah.png" 
+    },
   ];
 
   return (
@@ -88,10 +128,20 @@ export default function SpeakersPage() {
                 key={index} 
                 className="bg-white/10 backdrop-blur-xl rounded-[2rem] p-6 shadow-2xl border border-white/20 transition-all duration-300 group text-center flex flex-col items-center"
               >
-                <div className="w-32 h-32 rounded-full mb-6 bg-gradient-to-br from-indigo-500 to-pink-600 flex items-center justify-center text-white text-4xl font-bold shadow-[0_0_30px_rgba(233,30,99,0.4)] relative overflow-hidden group-hover:scale-110 transition-transform duration-500 border-2 border-white/20">
-                  <span className="relative z-10 drop-shadow-md">{initials}</span>
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                  <Mic className="absolute bottom-2 right-2 text-white/40" size={24} />
+                <div className="w-32 h-32 rounded-full mb-6 bg-gradient-to-br from-indigo-500 to-pink-600 flex items-center justify-center text-white text-4xl font-bold shadow-[0_0_30px_rgba(233,30,99,0.4)] relative overflow-hidden transition-transform duration-500 border-2 border-white/20">
+                  {speaker.image ? (
+                    <img 
+                      src={speaker.image} 
+                      alt={speaker.name} 
+                      className="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-110"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                  ) : null}
+                  <span className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold z-0 drop-shadow-md">{initials}</span>
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-20"></div>
+                  <Mic className="absolute bottom-2 right-2 text-white/40 z-20" size={24} />
                 </div>
                 
                 <h3 className="text-xl font-bold text-white mb-2 leading-snug">{speaker.name}</h3>
