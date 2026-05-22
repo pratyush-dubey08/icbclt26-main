@@ -135,7 +135,7 @@ export default function SpeakersPage() {
                       <img 
                         src={speaker.image} 
                         alt={speaker.name} 
-                        className="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-110 object-center"
+                        className={`w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-110 ${speaker.name.includes("Vinod Bhatt") ? "object-top" : "object-center"}`}
                         onError={(e) => {
                           (e.target as HTMLImageElement).style.display = 'none';
                         }}

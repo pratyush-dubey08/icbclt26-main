@@ -69,8 +69,9 @@ export default function Home() {
             <motion.span variants={fadeInUp} className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] w-full max-w-none text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)] leading-[1.2] px-4 md:px-2">
               <span className="inline-block xl:whitespace-nowrap">Interfacing Business, Culture,</span><br className="hidden xl:block" /> <span className="inline-block xl:whitespace-nowrap">Language and Technology:</span>
             </motion.span>
-            <motion.span variants={fadeInUp} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-white to-blue-200 mt-4 w-full pb-4 drop-shadow-2xl font-black leading-[1.2] px-4 md:px-2">
-              Transforming Global Communication and Innovation (ICBCLT-2026)
+            <motion.span variants={fadeInUp} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-white to-blue-200 mt-4 w-full pb-4 drop-shadow-2xl font-black leading-[1.3] px-4 md:px-2 block">
+              Transforming Global Communication and Innovation <br />
+              <span>(ICBCLT-2026)</span>
             </motion.span>
           </motion.h1>
 
@@ -628,7 +629,7 @@ export default function Home() {
                     <img 
                       src={person.image} 
                       alt={person.name} 
-                      className="w-full h-full object-cover relative z-10 object-center"
+                      className={`w-full h-full object-cover relative z-10 ${person.name.includes("Bhatt") ? "object-top" : "object-center"}`}
                       onError={(e) => {
                         (e.target as HTMLImageElement).style.display = 'none';
                       }}
