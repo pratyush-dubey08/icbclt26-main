@@ -106,13 +106,7 @@ export default function ContactPage() {
               {/* Subtle dynamic shapes */}
               <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-bl-full blur-xl group-hover:scale-125 transition-transform duration-500"></div>
               
-              <div className="flex items-center space-x-3 mb-6 relative z-10">
-                <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${contact.badgeColor} shadow-sm`}>
-                  Organiser
-                </span>
-              </div>
-              
-              <h2 className="text-2xl font-bold text-[#0a2540] mb-2 relative z-10">
+              <h2 className="text-2xl font-bold text-[#0a2540] mb-2 mt-2 relative z-10">
                 {contact.name}
               </h2>
               
@@ -156,8 +150,8 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
             <div>
               <h3 className="text-2xl font-bold text-[var(--color-brand-gold-light)] mb-4 uppercase tracking-wide">Official Email</h3>
-              <p className="text-gray-300 leading-relaxed mb-6 font-light text-base">
-                For any inquiries regarding the conference, registration, or academic collaborations, please email us directly.
+              <p className="text-gray-200 leading-relaxed mb-6 font-normal text-lg">
+                For any inquiries regarding the conference or registration, please email us directly.
               </p>
               <a 
                 href="mailto:icbclt2026@vitbhopal.ac.in" 
