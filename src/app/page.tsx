@@ -517,8 +517,18 @@ export default function Home() {
             {/* Center Top */}
             <div className="w-full md:w-[60%] lg:w-[40%]">
               <motion.div variants={fadeInUp} whileHover={{ scale: 1.05, y: -10 }} className="bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-lg border border-white flex flex-col items-center text-center transition-all h-full">
-                <div className="w-28 h-28 rounded-full bg-gradient-to-tr from-[var(--color-brand-gold)] to-pink-500 shadow-[0_0_20px_rgba(233,30,99,0.3)] mb-6 flex items-center justify-center text-white">
-                  <Users size={40} />
+                <div className="w-28 h-28 rounded-full bg-gradient-to-tr from-[var(--color-brand-gold)] to-pink-500 shadow-[0_0_20px_rgba(233,30,99,0.3)] mb-6 flex items-center justify-center text-white relative overflow-hidden border border-gray-100/50">
+                  <img 
+                    src="/Images/Prof. Dr. VÍCTOR RÍOS OJEDA.png" 
+                    alt="Prof. Dr. Víctor Ríos Ojeda" 
+                    className="w-full h-full object-cover relative z-10"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center text-white z-0">
+                    <Users size={40} />
+                  </div>
                 </div>
                 <h4 className="text-xl font-bold text-[#0a2540] mb-2">Prof. Dr. Víctor Ríos Ojeda</h4>
                 <p className="text-[var(--color-brand-gold)] font-medium text-sm mb-4">Chancellor</p>
@@ -528,12 +538,32 @@ export default function Home() {
             {/* Bottom Row */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
               {[
-                { name: "Prof. Dra. Gladys Emilce Brítez Caballero", title: "Vice Chancellor" },
-                { name: "Ing. Agp. Víctor Armín Riveros Insaurralde", title: "Dean, College of Agricultural Sciences and Rural Development" },
+                { 
+                  name: "Prof. Dra. Gladys Emilce Brítez Caballero", 
+                  title: "Vice Chancellor",
+                  image: "/Images/Prof. Dra. Gladys Emilce Brítez Caballero,.png"
+                },
+                { 
+                  name: "Ing. Agp. Víctor Armín Riveros Insaurralde", 
+                  title: "Dean, College of Agricultural Sciences and Rural Development",
+                  image: "/Images/Víctor Armín Riveros Insaurralde, M.E.Sc..png"
+                },
               ].map((person, i) => (
                 <motion.div variants={fadeInUp} whileHover={{ scale: 1.05, y: -10 }} key={i} className="bg-white/70 backdrop-blur-xl p-8 rounded-3xl shadow-lg border border-white flex flex-col items-center text-center transition-all h-full">
-                  <div className="w-28 h-28 rounded-full bg-gradient-to-tr from-[var(--color-brand-gold)] to-pink-500 shadow-[0_0_20px_rgba(233,30,99,0.3)] mb-6 flex items-center justify-center text-white">
-                    <Users size={40} />
+                  <div className="w-28 h-28 rounded-full bg-gradient-to-tr from-[var(--color-brand-gold)] to-pink-500 shadow-[0_0_20px_rgba(233,30,99,0.3)] mb-6 flex items-center justify-center text-white relative overflow-hidden border border-gray-100/50">
+                    {person.image ? (
+                      <img 
+                        src={person.image} 
+                        alt={person.name} 
+                        className="w-full h-full object-cover relative z-10"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
+                    ) : null}
+                    <div className="absolute inset-0 flex items-center justify-center text-white z-0">
+                      <Users size={40} />
+                    </div>
                   </div>
                   <h4 className="text-xl font-bold text-[#0a2540] mb-2">{person.name}</h4>
                   <p className="text-[var(--color-brand-gold)] font-medium text-sm mb-4">{person.title}</p>
@@ -589,8 +619,18 @@ export default function Home() {
             
             <motion.div variants={fadeInUp} whileHover={{ scale: 1.02 }} className="bg-gradient-to-br from-[#0a2540] to-indigo-900 text-white p-10 rounded-3xl shadow-2xl flex flex-col sm:flex-row items-center text-center sm:text-left gap-8 border border-white/10 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brand-gold)]/20 rounded-bl-full blur-2xl"></div>
-              <div className="w-32 h-32 rounded-full bg-white/10 shadow-inner flex items-center justify-center flex-shrink-0 text-[var(--color-brand-gold-light)] relative z-10 backdrop-blur-sm border border-white/20">
-                 <Users size={48} />
+              <div className="w-32 h-32 rounded-full bg-white/10 shadow-inner flex items-center justify-center flex-shrink-0 text-[var(--color-brand-gold-light)] relative z-10 backdrop-blur-sm border border-white/20 overflow-hidden border border-gray-100/50">
+                 <img 
+                   src="/Images/Peter M Tase.png" 
+                   alt="Prof. Peter Marko Tase" 
+                   className="w-full h-full object-cover relative z-10"
+                   onError={(e) => {
+                     (e.target as HTMLImageElement).style.display = 'none';
+                   }}
+                 />
+                 <div className="absolute inset-0 flex items-center justify-center text-[var(--color-brand-gold-light)] z-0">
+                   <Users size={48} />
+                 </div>
               </div>
               <div className="relative z-10">
                 <h3 className="text-[var(--color-brand-gold)] font-bold mb-2 uppercase tracking-wide text-sm">Conference Executive</h3>
@@ -601,7 +641,7 @@ export default function Home() {
           </motion.div>
 
           <h3 id="conveners" className="text-2xl font-bold text-center text-[var(--color-brand-blue)] mb-10 uppercase tracking-wider">Conveners</h3>
-          <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               { 
                 name: "Dr. Vinod Bhatt", 
@@ -615,11 +655,8 @@ export default function Home() {
               },
               { 
                 name: "Magister Graciela Barrios", 
-                title: "Chief of Staff, College of Agriculture Engineering and Rural Development, UN - PILAR" 
-              },
-              { 
-                name: "Lic. Maria Lourdes Coronel Caballero", 
-                title: "General Director for Coordination and Strategic Planning" 
+                title: "Chief of Staff, College of Agriculture Engineering and Rural Development, UN - PILAR",
+                image: "/Images/Ing. GRACIELA BARRIOS.png"
               },
             ].map((person, i) => (
               <motion.div variants={fadeInUp} whileHover={{ y: -10, scale: 1.02 }} key={i} className="bg-gradient-to-br from-[#0a2540] to-indigo-900 text-white p-6 rounded-3xl shadow-lg text-center flex flex-col items-center transition-all group border border-white/10 relative overflow-hidden">
