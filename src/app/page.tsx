@@ -613,7 +613,7 @@ export default function Home() {
               <div className="relative z-10">
                 <h3 className="text-[var(--color-brand-gold)] font-bold mb-2 uppercase tracking-wide text-sm">Conference Chair</h3>
                 <h4 className="text-2xl font-bold mb-2">Dr. Zaheer Kareem Ansari</h4>
-                <p className="text-gray-300">Dean, School of Advanced Sciences and Languages (SASL), VIT Bhopal University</p>
+                <p className="text-gray-300">Dean(I/C), School of Advanced Sciences and Languages (SASL), VIT Bhopal University</p>
               </div>
             </motion.div>
             
