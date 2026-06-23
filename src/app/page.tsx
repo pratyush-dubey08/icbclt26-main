@@ -599,7 +599,7 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brand-gold)]/20 rounded-bl-full blur-2xl"></div>
               <div className="w-32 h-32 rounded-full bg-white/10 shadow-inner flex items-center justify-center flex-shrink-0 text-[var(--color-brand-gold-light)] relative z-10 backdrop-blur-sm border border-white/20 overflow-hidden border border-gray-100">
                  <img 
-                   src="/Images/Dr. Zaheer Kareem Ansari.png" 
+                   src="/Images/Dr. Zaheer Kareem Ansari.jpg" 
                    alt="Dr. Zaheer Kareem Ansari" 
                    className="w-full h-full object-cover relative z-10"
                    onError={(e) => {
