@@ -21,8 +21,8 @@ export default function SpeakersPage() {
   const speakers = [
     { 
       name: "PROF. ING. HÉCTOR RUBÉN PAZ", 
-      title: "", 
-      country: "", 
+      title: "Dean, College of Exact Sciences and Technologies, National University of Santiago del Estero", 
+      country: "Republic of Argentina", 
       image: "/Images/PROF. ING. HÉCTOR RUBÉN PAZ.png" 
     },
     { 
@@ -40,13 +40,13 @@ export default function SpeakersPage() {
     { 
       name: "Dr. Vinod Bhatt", 
       title: "Associate Professor", 
-      country: "VIT Bhopal University", 
+      country: "VIT Bhopal University, India", 
       image: "/Images/Dr. Vinod Bhatt.png" 
     },
     { 
       name: "Prof. Dr. STEVE H. HANKE", 
-      title: "", 
-      country: "", 
+      title: "Professor, Applied Economics, Founder, Institute for Applied Economics, Global Health", 
+      country: "Johns Hopkins University Baltimore", 
       image: "/Images/Prof. Dr. STEVE H. HANKE.png" 
     },
     { 
@@ -64,8 +64,14 @@ export default function SpeakersPage() {
     { 
       name: "Ashok Kumar Selliah", 
       title: "Business Leader in Real Estate and Construction", 
-      country: "Canada - Sri Lanka", 
+      country: "Canada", 
       image: "/Images/Ashok Kumar Selliah.png" 
+    },
+    { 
+      name: "Dr. Dev Brat Gupta", 
+      title: "Assistant Professor, SASL", 
+      country: "VIT Bhopal University, India", 
+      image: "/Images/Dr. Dev Brat Gupta.png" 
     },
   ];
 
@@ -107,7 +113,7 @@ export default function SpeakersPage() {
           variants={staggerContainer}
           initial="initial"
           whileInView="whileInView"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {speakers.map((speaker, index) => {
             // Get initials

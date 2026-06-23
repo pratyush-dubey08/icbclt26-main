@@ -71,11 +71,11 @@ export default function CallForPapersPage() {
           <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" className="space-y-6">
             <motion.div variants={fadeInUp} whileHover={{ scale: 1.02 }} className="flex flex-col md:flex-row md:items-center justify-between p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
               <span className="text-lg font-bold text-[#0a2540]">Last date for abstract submission</span>
-              <span className="text-xl font-bold text-[var(--color-brand-gold)] mt-2 md:mt-0 bg-[var(--color-brand-gold)]/10 px-4 py-1 rounded-full">20 June 2026</span>
+              <span className="text-xl font-bold text-[var(--color-brand-gold)] mt-2 md:mt-0 bg-[var(--color-brand-gold)]/10 px-4 py-1 rounded-full">10 July 2026</span>
             </motion.div>
             <motion.div variants={fadeInUp} whileHover={{ scale: 1.02 }} className="flex flex-col md:flex-row md:items-center justify-between p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
               <span className="text-lg font-bold text-[#0a2540]">Notification of Abstract acceptance</span>
-              <span className="text-xl font-bold text-[var(--color-brand-gold)] mt-2 md:mt-0 bg-[var(--color-brand-gold)]/10 px-4 py-1 rounded-full">05 July, 2026</span>
+              <span className="text-xl font-bold text-[var(--color-brand-gold)] mt-2 md:mt-0 bg-[var(--color-brand-gold)]/10 px-4 py-1 rounded-full">15 July 2026</span>
             </motion.div>
             <motion.div variants={fadeInUp} whileHover={{ scale: 1.02 }} className="flex flex-col md:flex-row md:items-center justify-between p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
               <span className="text-lg font-bold text-[#0a2540]">Last date for full length paper submission</span>

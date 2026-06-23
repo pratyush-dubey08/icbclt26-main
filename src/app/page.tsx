@@ -84,7 +84,7 @@ export default function Home() {
             {/* Glassmorphism Cards - Dark Theme */}
             <motion.div variants={fadeInUp} whileHover={{ y: -5, scale: 1.02 }} className="flex items-center space-x-4 bg-white/10 px-8 py-5 rounded-3xl backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-300 cursor-default">
               <Calendar className="text-[var(--color-brand-gold)]" size={32} />
-              <span className="font-bold tracking-wide">September 3-4, 2026</span>
+              <span className="font-bold tracking-wide">September 1-4, 2026</span>
             </motion.div>
             <motion.div variants={fadeInUp} whileHover={{ y: -5, scale: 1.02 }} className="flex items-center space-x-4 bg-white/10 px-8 py-5 rounded-3xl backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-300 max-w-lg text-left cursor-default">
               <MapPin className="text-[var(--color-brand-gold)] flex-shrink-0" size={32} />
@@ -265,7 +265,7 @@ export default function Home() {
                 In order to discuss new trends, theoretical developments, and real-world issues, the conference aims to bring together academics, researchers, business professionals, legislators, diplomats, and language specialists. It will provide a forum for multidisciplinary discussion, allowing participants to investigate the ways in which technical innovation, agricultural economics, geotechnical engineering, linguistic diversity, and cultural intelligence all influence international business communication.
               </p>
               <p>
-                On September 3-4, will be given a particular attention to the role of digital transformation, AI-enabled communication tools, cross-cultural management techniques, and language technology as they reshape global communication paradigms. Concerns on accessibility, inclusivity, and ethical dilemmas in technology-mediated communication will also be covered at the conference.
+                On September 1-4, will be given a particular attention to the role of digital transformation, AI-enabled communication tools, cross-cultural management techniques, and language technology as they reshape global communication paradigms. Concerns on accessibility, inclusivity, and ethical dilemmas in technology-mediated communication will also be covered at the conference.
               </p>
               <p>
                 The conference aims to promote knowledge exchange and collaborative inquiry to produce sustainable, inclusive, and innovative communication frameworks that effectively transcend cultural and linguistic barriers in the global corporate environment.
@@ -599,8 +599,8 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-brand-gold)]/20 rounded-bl-full blur-2xl"></div>
               <div className="w-32 h-32 rounded-full bg-white/10 shadow-inner flex items-center justify-center flex-shrink-0 text-[var(--color-brand-gold-light)] relative z-10 backdrop-blur-sm border border-white/20 overflow-hidden border border-gray-100">
                  <img 
-                   src="/Images/Dr. Hemant Nashine.png" 
-                   alt="Dr. Hemant Nashine" 
+                   src="/Images/Dr. Zaheer Kareem Ansari.png" 
+                   alt="Dr. Zaheer Kareem Ansari" 
                    className="w-full h-full object-cover relative z-10"
                    onError={(e) => {
                      (e.target as HTMLImageElement).style.display = 'none';
@@ -612,7 +612,7 @@ export default function Home() {
               </div>
               <div className="relative z-10">
                 <h3 className="text-[var(--color-brand-gold)] font-bold mb-2 uppercase tracking-wide text-sm">Conference Chair</h3>
-                <h4 className="text-2xl font-bold mb-2">Dr. Hemant Nashine</h4>
+                <h4 className="text-2xl font-bold mb-2">Dr. Zaheer Kareem Ansari</h4>
                 <p className="text-gray-300">Dean, School of Advanced Sciences and Languages (SASL), VIT Bhopal University</p>
               </div>
             </motion.div>
