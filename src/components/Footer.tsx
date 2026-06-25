@@ -14,8 +14,8 @@ export default function Footer() {
             </p>
             <div className="pt-4 flex items-center space-x-4">
                {/* Placeholders for logos mentioned: VIT, UNP */}
-               <div className="bg-white p-2 rounded text-[#0a2540] font-bold text-xs">VIT Bhopal</div>
-               <div className="bg-white p-2 rounded text-[#0a2540] font-bold text-xs">UNP</div>
+               <a href="https://vitbhopal.ac.in/" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded text-[#0a2540] font-bold text-xs hover:bg-slate-100 transition-colors">VIT Bhopal</a>
+               <a href="https://www.unp.edu.py/" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded text-[#0a2540] font-bold text-xs hover:bg-slate-100 transition-colors">UNP</a>
             </div>
           </div>
 

@@ -120,36 +120,42 @@ export default function Home() {
                 {/* Organised by */}
                 <motion.div variants={fadeInUp} whileHover={{ scale: 1.05 }} className="flex flex-col items-center text-center group">
                   <h3 className="text-sm md:text-base font-bold text-gray-500 mb-6 font-heading tracking-widest uppercase group-hover:text-[var(--color-brand-blue)] transition-colors h-6">Organised by</h3>
-                  <div className="relative w-40 h-40 md:w-48 md:h-48 mb-6 bg-white p-4 rounded-3xl shadow-sm border border-gray-100 flex items-center justify-center group-hover:shadow-md transition-shadow">
-                    <Image src="/vit-logo.png" alt="VIT Bhopal Logo" fill className="object-contain p-2" />
-                  </div>
-                  <div className="h-14 flex flex-col justify-start">
-                    <h4 className="text-lg font-bold text-[#0a2540] leading-tight mb-1">VIT Bhopal University</h4>
-                    <p className="text-gray-500 font-medium text-sm">India</p>
-                  </div>
+                  <a href="https://vitbhopal.ac.in/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center group-hover:opacity-95 transition-opacity">
+                    <div className="relative w-40 h-40 md:w-48 md:h-48 mb-6 bg-white p-4 rounded-3xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md transition-shadow">
+                      <Image src="/vit-logo.png" alt="VIT Bhopal Logo" fill className="object-contain p-2" />
+                    </div>
+                    <div className="h-14 flex flex-col justify-start">
+                      <h4 className="text-lg font-bold text-[#0a2540] leading-tight mb-1 group-hover:text-[var(--color-brand-gold)] transition-colors">VIT Bhopal University</h4>
+                      <p className="text-gray-500 font-medium text-sm">India</p>
+                    </div>
+                  </a>
                 </motion.div>
                 
                 {/* Academic Partner */}
                 <motion.div variants={fadeInUp} whileHover={{ scale: 1.05 }} className="flex flex-col items-center text-center group">
                   <h3 className="text-sm md:text-base font-bold text-gray-500 mb-6 font-heading tracking-widest uppercase group-hover:text-[var(--color-brand-blue)] transition-colors h-6">Academic Partner</h3>
-                  <div className="relative w-40 h-40 md:w-48 md:h-48 mb-6 bg-white p-4 rounded-3xl shadow-sm border border-gray-100 flex items-center justify-center group-hover:shadow-md transition-shadow">
-                    <Image src="/emerald-logo.png" alt="Emerald Publishing" fill className="object-contain p-6" />
-                  </div>
-                  <div className="h-14 flex flex-col justify-start">
-                    <h4 className="text-lg font-bold text-[#0a2540] leading-tight mb-1">Emerald Publishing</h4>
-                  </div>
+                  <a href="https://www.emerald.com/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center group-hover:opacity-95 transition-opacity">
+                    <div className="relative w-40 h-40 md:w-48 md:h-48 mb-6 bg-white p-4 rounded-3xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md transition-shadow">
+                      <Image src="/emerald-logo.png" alt="Emerald Publishing" fill className="object-contain p-6" />
+                    </div>
+                    <div className="h-14 flex flex-col justify-start">
+                      <h4 className="text-lg font-bold text-[#0a2540] leading-tight mb-1 group-hover:text-[var(--color-brand-gold)] transition-colors">Emerald Publishing</h4>
+                    </div>
+                  </a>
                 </motion.div>
                 
                 {/* In collaboration with */}
                 <motion.div variants={fadeInUp} whileHover={{ scale: 1.05 }} className="flex flex-col items-center text-center group">
                   <h3 className="text-sm md:text-base font-bold text-gray-500 mb-6 font-heading tracking-widest uppercase group-hover:text-[var(--color-brand-blue)] transition-colors h-6">In collaboration with</h3>
-                  <div className="relative w-40 h-40 md:w-48 md:h-48 mb-6 bg-white p-4 rounded-3xl shadow-sm border border-gray-100 flex items-center justify-center group-hover:shadow-md transition-shadow">
-                    <Image src="/unp-logo.png" alt="UNP Logo" fill className="object-contain p-2" />
-                  </div>
-                  <div className="h-14 flex flex-col justify-start">
-                    <h4 className="text-lg font-bold text-[#0a2540] leading-tight mb-1">Universidad Nacional de Pilar</h4>
-                    <p className="text-gray-500 font-medium text-sm">Paraguay</p>
-                  </div>
+                  <a href="https://www.unp.edu.py/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center group-hover:opacity-95 transition-opacity">
+                    <div className="relative w-40 h-40 md:w-48 md:h-48 mb-6 bg-white p-4 rounded-3xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md transition-shadow">
+                      <Image src="/unp-logo.png" alt="UNP Logo" fill className="object-contain p-2" />
+                    </div>
+                    <div className="h-14 flex flex-col justify-start">
+                      <h4 className="text-lg font-bold text-[#0a2540] leading-tight mb-1 group-hover:text-[var(--color-brand-gold)] transition-colors">Universidad Nacional de Pilar</h4>
+                      <p className="text-gray-500 font-medium text-sm">Paraguay</p>
+                    </div>
+                  </a>
                 </motion.div>
 
               </div>
@@ -178,12 +184,14 @@ export default function Home() {
                 About the University
               </span>
               <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6">
-                <motion.div whileHover={{ rotate: 5, scale: 1.1 }} className="bg-white p-2 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center w-20 h-20 flex-shrink-0">
-                  <div className="relative w-full h-full">
-                    <Image src="/vit-logo.png" alt="VIT Logo Icon" fill className="object-contain" />
-                  </div>
-                </motion.div>
-                <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">VIT Bhopal University</h2>
+                <a href="https://vitbhopal.ac.in/" target="_blank" rel="noopener noreferrer" className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6 group/link">
+                  <motion.div whileHover={{ rotate: 5, scale: 1.1 }} className="bg-white p-2 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center w-20 h-20 flex-shrink-0">
+                    <div className="relative w-full h-full">
+                      <Image src="/vit-logo.png" alt="VIT Logo Icon" fill className="object-contain" />
+                    </div>
+                  </motion.div>
+                  <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight group-hover/link:text-[var(--color-brand-gold-light)] transition-colors">VIT Bhopal University</h2>
+                </a>
               </div>
             </div>
             <div className="text-lg md:text-xl text-gray-200 space-y-5 text-left md:text-justify leading-relaxed font-light mt-8 px-2 md:px-0">
@@ -215,12 +223,14 @@ export default function Home() {
                 About the University
               </span>
               <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6">
-                <motion.div whileHover={{ rotate: -5, scale: 1.1 }} className="bg-white p-2 rounded-full shadow-sm border border-gray-100 flex items-center justify-center w-20 h-20 flex-shrink-0">
-                  <div className="relative w-full h-full">
-                    <Image src="/unp-logo.png" alt="UNP Logo Icon" fill className="object-contain" />
-                  </div>
-                </motion.div>
-                <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">Universidad Nacional de Pilar <span className="block text-xl text-gray-400 font-medium mt-1">(National University of Pilar)</span></h2>
+                <a href="https://www.unp.edu.py/" target="_blank" rel="noopener noreferrer" className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6 group/link">
+                  <motion.div whileHover={{ rotate: -5, scale: 1.1 }} className="bg-white p-2 rounded-full shadow-sm border border-gray-100 flex items-center justify-center w-20 h-20 flex-shrink-0">
+                    <div className="relative w-full h-full">
+                      <Image src="/unp-logo.png" alt="UNP Logo Icon" fill className="object-contain" />
+                    </div>
+                  </motion.div>
+                  <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight group-hover/link:text-[var(--color-brand-gold-light)] transition-colors">Universidad Nacional de Pilar <span className="block text-xl text-gray-400 font-medium mt-1">(National University of Pilar)</span></h2>
+                </a>
               </div>
             </div>
             <div className="text-lg md:text-xl text-gray-200 space-y-5 text-left md:text-justify leading-relaxed font-light mt-8 px-2 md:px-0">
