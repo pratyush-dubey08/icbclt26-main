@@ -134,14 +134,12 @@ export default function Home() {
                 {/* Academic Partner */}
                 <motion.div variants={fadeInUp} whileHover={{ scale: 1.05 }} className="flex flex-col items-center text-center group">
                   <h3 className="text-sm md:text-base font-bold text-gray-500 mb-6 font-heading tracking-widest uppercase group-hover:text-[var(--color-brand-blue)] transition-colors h-6">Academic Partner</h3>
-                  <a href="https://www.emerald.com/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center group-hover:opacity-95 transition-opacity">
-                    <div className="relative w-40 h-40 md:w-48 md:h-48 mb-6 bg-white p-4 rounded-3xl shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md transition-shadow">
-                      <Image src="/emerald-logo.png" alt="Emerald Publishing" fill className="object-contain p-6" />
-                    </div>
-                    <div className="h-14 flex flex-col justify-start">
-                      <h4 className="text-lg font-bold text-[#0a2540] leading-tight mb-1 group-hover:text-[var(--color-brand-gold)] transition-colors">Emerald Publishing</h4>
-                    </div>
-                  </a>
+                  <div className="relative w-40 h-40 md:w-48 md:h-48 mb-6 bg-white p-4 rounded-3xl shadow-sm border border-gray-100 flex items-center justify-center group-hover:shadow-md transition-shadow">
+                    <Image src="/emerald-logo.png" alt="Emerald Publishing" fill className="object-contain p-6" />
+                  </div>
+                  <div className="h-14 flex flex-col justify-start">
+                    <h4 className="text-lg font-bold text-[#0a2540] leading-tight mb-1">Emerald Publishing</h4>
+                  </div>
                 </motion.div>
                 
                 {/* In collaboration with */}
