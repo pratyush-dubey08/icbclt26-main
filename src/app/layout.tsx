@@ -18,6 +18,7 @@ const jakartaBody = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "ICBCLT-2026 | Interfacing Business, Culture, Language and Technology",
   description: "3rd International Conference on Interfacing Business, Culture, Language and Technology: Transforming Global Communication and Innovation (ICBCLT-2026)",
+  keywords: ["ICBCLT", "ICBCLT-2026", "VIT Bhopal", "International Conference", "Business", "Culture", "Language", "Technology", "Innovation"],
 };
 
 export default function RootLayout({
